@@ -1,0 +1,133 @@
+{
+ "days": [
+  {
+   "date": "2026-11-17",
+   "summary": "Top-voted papers on Hugging Face Daily Papers today: a fully open model family, harder benchmarks for coding agents, and a new defense against prompt injection.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "K2-Horizon: A Frontier Fleet of Open Source Language Models",
+     "url": "https://huggingface.co/papers/2611.21003",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "moe",
+     "note": "Six fully open models, from a 0.9B dense model to a 375B mixture-of-experts. Good for seeing how a whole model family is designed and trained."
+    },
+    {
+     "kind": "paper",
+     "title": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees",
+     "url": "https://huggingface.co/papers/2611.20218",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "Realistic software assignments, from clarifying the task to handing it off. Current coding agents complete few of them."
+    },
+    {
+     "kind": "paper",
+     "title": "SPILLWAY: Defending Tool-Using Agents against Prompt Injection",
+     "url": "https://huggingface.co/papers/2611.07222",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "safety",
+     "note": "Separates deciding what an agent may act on from cleaning its inputs, to stop hidden instructions in web pages and documents."
+    },
+    {
+     "kind": "paper",
+     "title": "PaperCritic: Training AI Reviewers to Assess the Soundness of Papers",
+     "url": "https://huggingface.co/papers/2611.17834",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "posttrain",
+     "note": "An AI reviewer trained with reinforcement learning to find soundness problems in research papers."
+    },
+    {
+     "kind": "paper",
+     "title": "Latent Feedback Is a Compute and Data Amplifier",
+     "url": "https://huggingface.co/papers/2611.20404",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "tf",
+     "note": "Feeds each token's top-layer state into the next token's input. A small change to the standard Transformer that makes training more efficient."
+    },
+    {
+     "kind": "paper",
+     "title": "ScaleVLA: Scaling Vision-Language-Action Models to 552B Parameters",
+     "url": "https://huggingface.co/papers/2611.21607",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "scaling",
+     "note": "Tests whether scaling laws also hold for models that control robots."
+    },
+    {
+     "kind": "paper",
+     "title": "MovieRoll: Rolling Out Long-Form Videos",
+     "url": "https://huggingface.co/papers/2611.21339",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "diffusion",
+     "note": "Keeps streaming video generation stable well past the length it was trained on."
+    }
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "summary": "Agents everywhere: robotics roadmaps, memory systems for agents, and faster decoding for vision-language models.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "Envisioning Agentic Robotics: A New Era of Robotic Systems",
+     "url": "https://huggingface.co/papers/2611.18359",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "A survey and roadmap for robots driven by a foundation model plus an agent harness. Easy to read as an overview of the field."
+    },
+    {
+     "kind": "paper",
+     "title": "MIRIX-2.0: Multi-Agent Memory System",
+     "url": "https://huggingface.co/papers/2611.12068",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "rag",
+     "note": "Long-term memory for LLM agents without fine-tuning. A close relative of retrieval-augmented generation."
+    },
+    {
+     "kind": "paper",
+     "title": "MMFlash: Faster Speculative Decoding for Vision-Language Models",
+     "url": "https://huggingface.co/papers/2611.18482",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "effattn",
+     "note": "Up to 3.58× faster generation with no loss in output quality, using speculative decoding and sparse attention for long video."
+    },
+    {
+     "kind": "paper",
+     "title": "Loopback Transformer: A Unified View of Residual Looped Transformers",
+     "url": "https://huggingface.co/papers/2611.07226",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "tf",
+     "note": "Reuses the same layers in a loop, with finer control over the updates. Beats standard and looped baselines."
+    },
+    {
+     "kind": "paper",
+     "title": "JVT: Just Video Transformer for pixel-space video diffusion",
+     "url": "https://huggingface.co/papers/2611.18549",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "diffusion",
+     "note": "Video diffusion straight on pixels, with no autoencoder. A clean, minimal design worth reading after DDPM."
+    },
+    {
+     "kind": "paper",
+     "title": "Mobile AI Factory: Specialized Language Models for Your Phone",
+     "url": "https://huggingface.co/papers/2611.13509",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "peft",
+     "note": "An agent that automatically fine-tunes and quantizes small models to fit a specific phone."
+    }
+   ]
+  }
+ ]
+}
