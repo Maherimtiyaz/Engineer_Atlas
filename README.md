@@ -17,10 +17,11 @@ It is one static file (`index.html`) with no build step, no server and no accoun
 **On your computer:** open `index.html` in any browser. Everything works offline except the daily drop.
 
 **Online with GitHub Pages (free):**
-1. Push this folder to a GitHub repository.
-2. In the repo: *Settings → Pages → Build and deployment → Source: Deploy from a branch*, pick `main` and `/ (root)`, then save.
-3. In the repo: *Settings → Actions → General → Workflow permissions*, choose *Read and write permissions*. This lets the daily job commit `daily.json`.
-4. Your site will be at `https://<your-username>.github.io/<repo-name>/`.
+1. In the repo: *Settings → Pages → Build and deployment → Source:* choose **GitHub Actions**.
+2. Open the *Actions* tab and run **Deploy site** once (or push any change).
+3. Your site is at `https://<your-username>.github.io/<repo-name>/`.
+
+After that, every push and every daily update redeploys the site on its own.
 
 ## Daily drop
 
