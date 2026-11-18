@@ -1,6 +1,84 @@
 {
  "days": [
   {
+   "date": "2026-11-18",
+   "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks",
+     "url": "https://huggingface.co/papers/2611.22115",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "We present Xing 4, a series of large language models that extends the TeleChat lineage through coordinated advances in model architecture and training infrastructure on Ascend. This report describes the design principles and systems engineering behind the seri…"
+    },
+    {
+     "kind": "paper",
+     "title": "AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs",
+     "url": "https://huggingface.co/papers/2611.17621",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "evals",
+     "note": "AscendGYM provides a benchmark for assessing kernel optimization capabilities on Ascend NPUs using real-workload test cases, two evaluation modes, and a Speedup-Token Score that balances speedup against token cost."
+    },
+    {
+     "kind": "paper",
+     "title": "Weight-Space Programming Doesn't Need Transformers",
+     "url": "https://huggingface.co/papers/2611.22055",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "tf",
+     "note": "When large language models write neural network weights without gradient-based training, they tend to design sparse table or associative-memory models that outperform same-sized Transformers with far fewer parameters and faster GPU inference, though pretrained…"
+    },
+    {
+     "kind": "paper",
+     "title": "ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models",
+     "url": "https://huggingface.co/papers/2611.21099",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "evals",
+     "note": "Frontier multimodal models can now control robots zero-shot from images, yet many manipulation tasks depend on contact forces that images cannot show. Bringing force to an API-only frozen model raises two challenges. First, contact evolves much faster than an …"
+    },
+    {
+     "kind": "paper",
+     "title": "Multi-Branch Transformer",
+     "url": "https://huggingface.co/papers/2611.19800",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "tf",
+     "note": "Branching Transformer blocks into parallel parameterized branches, combined with shared KV caching, improves language model quality and inference efficiency compared with standard sequential Transformers."
+    },
+    {
+     "kind": "paper",
+     "title": "TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation",
+     "url": "https://huggingface.co/papers/2611.23143",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "rlbasics",
+     "note": "Robot manipulation videos provide a rich visual experience, yet recovering robot action and gripper-state annotations from RGB observations still remains challenging. Using the embodiment-agnostic tool-center-point (TCP) pose as the action space, we present TC…"
+    },
+    {
+     "kind": "paper",
+     "title": "FastFrames: Video Generation at Interactive Latency",
+     "url": "https://huggingface.co/papers/2611.23226",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "serve",
+     "note": "Autoregressive video diffusion models generate frames based on new observations and inputs, making them a promising medium for interactive visual experiences. However, existing models are orders of magnitude too slow for fluid interaction. This paper introduce…"
+    },
+    {
+     "kind": "paper",
+     "title": "Self-Improvement Memory Enables Continual Recursive Self-Improvement",
+     "url": "https://huggingface.co/papers/2611.18856",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "rag",
+     "note": "Continual recursive self-improvement lets harness optimizers reuse and revise prior edits across changing benchmarks or policy models by storing rationales, predicted and observed outcomes, and evaluation contexts in a self-improvement memory, improving final …"
+    }
+   ]
+  },
+  {
    "date": "2026-11-17",
    "summary": "Top-voted papers on Hugging Face Daily Papers today: a fully open model family, harder benchmarks for coding agents, and a new defense against prompt injection.",
    "items": [
