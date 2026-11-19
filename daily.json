@@ -1,6 +1,84 @@
 {
  "days": [
   {
+   "date": "2026-11-19",
+   "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "Tideway: Phase-Aware Tiered Memory Management for MoE Inference on Consumer Devices",
+     "url": "https://huggingface.co/papers/2611.14848",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "rag",
+     "note": "TIDEWAY enables efficient inference of large Mixture-of-Experts models on memory-constrained consumer devices by treating host RAM and GPU VRAM as a unified memory pool with phase-aware layouts and optimized CUDA Graph execution under expert paging."
+    },
+    {
+     "kind": "paper",
+     "title": "Jeveration: System One Models Now Generate",
+     "url": "https://huggingface.co/papers/2611.24738",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "multimodal",
+     "note": "Jeveration repurposes a frozen vision-language model to generate coherent images and perform image-to-image and dense prediction tasks in a single forward pass with fast 512x512 generation."
+    },
+    {
+     "kind": "paper",
+     "title": "PROLA: Principal-Orthogonal Low-rank Adaptation for Predictive Spatiotemporal Weather Downscaling",
+     "url": "https://huggingface.co/papers/2611.11318",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "posttrain",
+     "note": "High-resolution weather prediction is important for resolving local atmospheric patterns missed by coarse global forecasts. Large pretrained weather backbones have improved global forecasting, but adapting them to produce future high-resolution fields from rec…"
+    },
+    {
+     "kind": "paper",
+     "title": "Game2Player: Scaling Gameplay Experience for Visual Agents through Environment-Player Co-Development",
+     "url": "https://huggingface.co/papers/2611.24154",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "Games are a rich testbed for visual agents, demanding perception, long-horizon planning, and precise control. However, collecting human gameplay is costly, and learning from gameplay videos requires inferring missing actions. Existing datasets also cover a lim…"
+    },
+    {
+     "kind": "paper",
+     "title": "The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements",
+     "url": "https://huggingface.co/papers/2611.23068",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "Agent evolution is often bottlenecked by noisy evaluations that cannot reliably identify better candidate artifacts or rank methods, so progress requires making true improvements detectable and accumulable."
+    },
+    {
+     "kind": "paper",
+     "title": "WorldRuler: Interactive World Modeling under Configurable Rules",
+     "url": "https://huggingface.co/papers/2611.24869",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": null,
+     "note": "A rule-graph-based generative world model preserves user-defined rules and world states across saving and loading while accurately realizing rule-induced visual changes on designated objects and attributes."
+    },
+    {
+     "kind": "paper",
+     "title": "ALIVE: Making Streaming Video Models Interactive",
+     "url": "https://huggingface.co/papers/2611.21366",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "evals",
+     "note": "Streaming video LLMs can continuously observe the world, yet often handle user requests in isolation. We introduce ALIVE, an interactive streaming video model supporting proactive monitoring, streaming task coordination, and feedback-seeking interaction. We co…"
+    },
+    {
+     "kind": "paper",
+     "title": "Code World Model 2.0: Towards Infinite Controllable Video Generation",
+     "url": "https://huggingface.co/papers/2611.22925",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "diffusion",
+     "note": "Visual proxies decouple explicit world-state simulation from photorealistic video synthesis, offering a controllable interface for both offline clip creation and real-time interactive streaming. Yet a practical renderer must address two challenges. Upstream pr…"
+    }
+   ]
+  },
+  {
    "date": "2026-11-18",
    "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
    "items": [
