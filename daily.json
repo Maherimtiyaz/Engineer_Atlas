@@ -1,6 +1,84 @@
 {
  "days": [
   {
+   "date": "2026-11-20",
+   "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation",
+     "url": "https://huggingface.co/papers/2611.26444",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "evals",
+     "note": "A diagnostic benchmark of 180 simulated manipulation configurations evaluates whether embodied systems can combine history-based reasoning, precise execution, and closed-loop environmental feedback, revealing that single-view competence does not transfer to co…"
+    },
+    {
+     "kind": "paper",
+     "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
+     "url": "https://huggingface.co/papers/2611.26409",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "multimodal",
+     "note": "WeMM-Video is a family of Chinese-English bilingual omni-modal foundation models that unify text, image, audio, and video processing for joint audio-visual perception and reasoning, using hybrid thinking modes and large-scale training to achieve strong open-so…"
+    },
+    {
+     "kind": "paper",
+     "title": "Coda-DaVinci: Reimagining Video Generation with Code2Video",
+     "url": "https://huggingface.co/papers/2611.26595",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "diffusion",
+     "note": "A task-adaptive agentic framework utilizes 3D proxies, physics simulation, and multi-agent coordination to enhance the structural control, physical plausibility, and visual realism of generated videos."
+    },
+    {
+     "kind": "paper",
+     "title": "The Mask Is Not the Object: Volumetric Supervision for 3D Gaussian Segmentation",
+     "url": "https://huggingface.co/papers/2611.21383",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "evals",
+     "note": "A plug-and-play objective, VODA, groups per-pixel contributors by local depth to supervise all Gaussians in selected depth clusters, improving volumetric segmentation and enabling evaluation via Removal-3D and Removal Depth Error."
+    },
+    {
+     "kind": "paper",
+     "title": "WeVisForensics: Self-Evolving Agent for Omni AI-Generated Video Detection",
+     "url": "https://huggingface.co/papers/2611.21373",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "WeVisForensics coordinates self-evolving visual and audio forensic inspector agents under a dual-timescale reinforcement learning policy to detect generated-video artifacts with localized evidence and high accuracy."
+    },
+    {
+     "kind": "paper",
+     "title": "TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs",
+     "url": "https://huggingface.co/papers/2611.25387",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "rag",
+     "note": "Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models (MLLMs) do the same? CAPTCHAs offer a natural test, since h…"
+    },
+    {
+     "kind": "paper",
+     "title": "EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning",
+     "url": "https://huggingface.co/papers/2611.26380",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "safety",
+     "note": "Egocentric video captioning requires fine-grained detail and accurate timing, yet current multimodal large language models (MLLMs) often miss brief actions, confuse their order, or misinterpret the wearer's motion. Existing caption formats also offer limited s…"
+    },
+    {
+     "kind": "paper",
+     "title": "Posterior Matching Distillation",
+     "url": "https://huggingface.co/papers/2611.26629",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "peft",
+     "note": "Posterior Matching Distillation trains a stochastic student to match a teacher diffusion model’s full posterior via tilted mean constraints, enabling high-quality few-step image generation without auxiliary score networks."
+    }
+   ]
+  },
+  {
    "date": "2026-11-19",
    "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
    "items": [
