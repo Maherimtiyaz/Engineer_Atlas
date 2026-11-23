@@ -1,6 +1,84 @@
 {
  "days": [
   {
+   "date": "2026-11-23",
+   "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
+     "url": "https://huggingface.co/papers/2611.27193",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "moe",
+     "note": "Constraining residual stream mixing within the Birkhoff polytope via geometric contraction improves stability and scalability of hyper-connections in large-scale dense and mixture-of-experts model pretraining."
+    },
+    {
+     "kind": "paper",
+     "title": "Non-penetrating World Models",
+     "url": "https://huggingface.co/papers/2611.27963",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "rag",
+     "note": "A benchmark and lightweight framework leverage hidden states from frozen diffusion transformers to detect and prevent object penetration in interactive video world models, reducing physical violations and generalizing zero-shot."
+    },
+    {
+     "kind": "paper",
+     "title": "Clover-35B-A3B-Preview Technical Report",
+     "url": "https://huggingface.co/papers/2611.24636",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combi…"
+    },
+    {
+     "kind": "paper",
+     "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+     "url": "https://huggingface.co/papers/2611.15449",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "reason",
+     "note": "Text-aware image super-resolution (TAISR) aims to recover high-resolution images from low-resolution inputs while preserving textual content. Existing methods treat this as a visual restoration problem, yet severely degraded text often cannot be read from loca…"
+    },
+    {
+     "kind": "paper",
+     "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+     "url": "https://huggingface.co/papers/2611.27973",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "rag",
+     "note": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches…"
+    },
+    {
+     "kind": "paper",
+     "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+     "url": "https://huggingface.co/papers/2611.25773",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "Full-duplex interaction models exhibit strong conversational agency, enabling natural, low-latency turn-taking, backchannels, and interruptions. However, completing tasks further requires task agency: timely tool invocation and argument revision following user…"
+    },
+    {
+     "kind": "paper",
+     "title": "StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning",
+     "url": "https://huggingface.co/papers/2611.27915",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "reason",
+     "note": "StereoVLM is a geometry-aware binocular vision-language model trained with hierarchical supervision from calibrated stereo to enable metric 3D spatial reasoning, evaluated by Stereo3D-Bench."
+    },
+    {
+     "kind": "paper",
+     "title": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
+     "url": "https://huggingface.co/papers/2611.21485",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "rag",
+     "note": "Persistent spatial understanding is essential for embodied agents to operate reliably in environments they repeatedly encounter. It requires recognizing revisited places despite viewpoint changes, distinguishing them from similar-looking rooms, and updating me…"
+    }
+   ]
+  },
+  {
    "date": "2026-11-21",
    "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
    "items": [
