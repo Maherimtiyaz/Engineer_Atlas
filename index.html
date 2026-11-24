@@ -239,6 +239,29 @@ aside.toc a:hover,aside.toc a.on{color:var(--fg);border-left-color:var(--fg)}
 .trkbtn{justify-self:start;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:6px;padding:6px 12px;cursor:pointer}
 .muted{color:var(--muted)}
 .tt a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.tree-tools{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.tree-tools button{border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:6px;padding:5px 11px;cursor:pointer;font-size:13px}
+.tree-tools button:hover{border-color:var(--accent);color:var(--accent)}
+.tree-hint{font-size:13px;color:var(--muted);margin-left:6px}
+.tree-hint a{color:var(--accent)}
+.tree-wrap{height:calc(100vh - 230px);min-height:420px;border:1px solid var(--line);border-radius:8px;overflow:hidden;touch-action:none;cursor:grab;background:var(--bg)}
+.tree-wrap:active{cursor:grabbing}
+.tree-svg{width:100%;height:100%;display:block}
+.tree-svg .tl{fill:none;stroke:var(--line);stroke-width:1.3}
+.tree-svg .td{fill:none;stroke-width:1.8}
+.tree-svg .td.pre{stroke:var(--accent)}
+.tree-svg .td.unl{stroke:var(--accent);stroke-dasharray:5 4;opacity:.8}
+.tree-svg .tn rect{fill:var(--bg);stroke:var(--line)}
+.tree-svg .tn text{fill:var(--fg);font:500 12px var(--sans)}
+.tree-svg .tn.grp rect{fill:var(--hover);stroke:var(--faint)}
+.tree-svg .tn.grp text{font-weight:600}
+.tree-svg .tn .tg{fill:var(--accent);font:600 13px var(--mono)}
+.tree-svg .tn .tk{fill:var(--done)}
+.tree-svg .tn.done rect{fill:var(--accent-weak);stroke:var(--done)}
+.tree-svg .tn.sel rect{stroke:var(--fg);stroke-width:2}
+.tree-svg .tn.pre rect,.tree-svg .tn.unl rect{stroke:var(--accent);stroke-width:1.6}
+.tree-svg .tn{cursor:pointer}
+@media (max-width:860px){.tree-wrap{height:70vh}}
 
 .scrim{display:none}
 @media (max-width:1100px){.page{grid-template-columns:minmax(0,1fr)}aside.toc{display:none}}
@@ -307,7 +330,7 @@ let findQ="";
 function renderIndex(cur){
   const q=findQ.toLowerCase();
   const hit=t=>!q||[t.title,t.why,...t.ideas,...["lectures","papers","reads"].flatMap(k=>t[k].map(r=>r.t+" "+r.by)),...t.projects.map(p=>p.n),...t.repos.map(r=>r.r)].join(" ").toLowerCase().includes(q);
-  const nav=[["","Start here"],["path","My path"],["map","Topic map"],...(CONFIG.daily?[["daily","Daily drop"]]:[]),["projects",L.projects],["today","Today"],...(TR?[["tracks","Floor & Ceiling"]]:[]),...(PL.length?[["playlists","Courses & playlists"]]:[]),...(CONFIG.hubs||[]).map(h=>["hub-"+h.id,h.title]),...(CONFIG.sections?[["sections","Sections"]]:[]),...(CONFIG.pages||[]).map(p=>[p.id,p.title]),["courses",CONFIG.coursesLabel]];
+  const nav=[["","Start here"],["path","My path"],["map","Topic map"],...(CONFIG.daily?[["daily","Daily drop"]]:[]),["projects",L.projects],["today","Today"],["tree","Knowledge tree"],...(TR?[["tracks","Floor & Ceiling"]]:[]),...(PL.length?[["playlists","Courses & playlists"]]:[]),...(CONFIG.hubs||[]).map(h=>["hub-"+h.id,h.title]),...(CONFIG.sections?[["sections","Sections"]]:[]),...(CONFIG.pages||[]).map(p=>[p.id,p.title]),["courses",CONFIG.coursesLabel]];
   let h=`<div class="logo">${esc(CONFIG.title)} <small>${esc(CONFIG.tag)}</small></div><input class="find" id="find" type="search" placeholder="${esc(CONFIG.searchHint||"Search topics, papers, repos")}" aria-label="Search" value="${esc(findQ)}"><div class="navtop">`+nav.map(([k,l])=>`<a href="#${k}"${cur===k?' aria-current="page"':""}>${l}</a>`).join("")+`</div>`;
   const cp=curPhase();let lastPh=-1;
   if(focus&&!q)h+=`<p class="focusnote">Focus mode: showing phase ${cp+1} only. <button id="unfocus">Show everything</button></p>`;
@@ -415,7 +438,7 @@ function dailyPage(){
 let tocObs=null;
 function render(){
   const h=location.hash.slice(1);let v;
-  if(h.startsWith("t-")&&T[h.slice(2)])v=topicPage(h.slice(2));else if(h==="path")v=pathPage();else if(h==="map")v=mapPage();else if(h==="daily"&&CONFIG.daily)v=dailyPage();else if(h==="projects")v=projectsPage();else if(h==="courses")v=coursesPage();else if(h==="sections"&&CONFIG.sections)v=sectionsPage();else if(h==="playlists"&&PL.length)v=playlistsPage();else if(h.startsWith("hub-")&&(CONFIG.hubs||[]).some(x=>"hub-"+x.id===h))v=hubPage(CONFIG.hubs.find(x=>"hub-"+x.id===h));else if(h==="timetable"){v=timetablePage()}else if(h==="today"){v=todayPage()}else if(h==="tracks"&&TR){v=tracksPage()}else if((CONFIG.pages||[]).some(p=>p.id===h)){const p=CONFIG.pages.find(p=>p.id===h);v={crumb:`<a href="#">${esc(CONFIG.short)}</a> / ${esc(p.title)}`,wide:false,toc:[],html:p.html}}else v=home();
+  if(h.startsWith("t-")&&T[h.slice(2)])v=topicPage(h.slice(2));else if(h==="path")v=pathPage();else if(h==="map")v=mapPage();else if(h==="daily"&&CONFIG.daily)v=dailyPage();else if(h==="projects")v=projectsPage();else if(h==="courses")v=coursesPage();else if(h==="sections"&&CONFIG.sections)v=sectionsPage();else if(h==="playlists"&&PL.length)v=playlistsPage();else if(h.startsWith("hub-")&&(CONFIG.hubs||[]).some(x=>"hub-"+x.id===h))v=hubPage(CONFIG.hubs.find(x=>"hub-"+x.id===h));else if(h==="timetable"){v=timetablePage()}else if(h==="today"){v=todayPage()}else if(h==="tree"){v=treePage()}else if(h==="tracks"&&TR){v=tracksPage()}else if((CONFIG.pages||[]).some(p=>p.id===h)){const p=CONFIG.pages.find(p=>p.id===h);v={crumb:`<a href="#">${esc(CONFIG.short)}</a> / ${esc(p.title)}`,wide:false,toc:[],html:p.html}}else v=home();
   renderIndex(h);toggleNav(false);
   $("#crumb").innerHTML=v.crumb;
   const pg=$("#page");pg.classList.toggle("wide",!!v.wide||!v.toc.length);
@@ -526,6 +549,65 @@ function todayPage(){
   <h2 id="next"><span class="sn">02</span>Coming next</h2><ul class="list">${next.map(n=>`<li><a href="#t-${n}"><span class="t">${T[n].num} ${esc(T[n].title)}</span><span class="b">${esc(T[n].why)}</span><span class="d">${hrs(T[n].mins)}</span></a></li>`).join("")}</ul>
   <p class="empty">A topic usually takes several days. Today's page stays on it until you mark it done; then it moves on.</p>`;
   return{crumb:`<a href="#">${esc(CONFIG.short)}</a> / Today`,wide:false,toc:[],html};
+}
+
+// ---- Knowledge tree: zoomable, pannable, collapsible hierarchy with dependency overlay
+var treeOpen=treeOpen||store.get(K+".treeOpen",null),treeSel=treeSel||null,treeView=treeView||null;
+function treeData(){
+  const seq=[...phOrder(),...PH.map((_,i)=>i).filter(i=>!phOrder().includes(i))];
+  return {id:"root",label:CONFIG.title,kids:seq.map(i=>({id:"p"+i,label:(PH[i].badge||("Phase "+(seq.indexOf(i)+1)))+" · "+PH[i].title,ph:i,kids:DATA.chapters.map((c,ci)=>({c,ci})).filter(x=>x.c.phase===i).map(({c,ci})=>({id:"c"+ci,label:c.title,kids:c.topics.map(t=>({id:"t-"+t.id,tid:t.id,label:T[t.id].num+" "+T[t.id].title}))}))}))};
+}
+function treePage(){
+  const html=`<p class="eyebrow">How everything connects</p><h1>Knowledge tree</h1><p class="lede" style="max-width:68ch">The whole atlas as one tree: phases branch into chapters, chapters into topics. Click a phase or chapter to fold or unfold it. Click a topic to see what it needs (solid lines) and what it unlocks (dashed). Scroll or pinch to zoom, drag to move.</p>
+  <div class="tree-tools"><button id="tz-in" aria-label="Zoom in">+</button><button id="tz-out" aria-label="Zoom out">−</button><button id="tz-fit">Fit</button><button id="tz-all">Expand all</button><button id="tz-none">Collapse all</button><button id="tz-cur">My current phase</button><span class="tree-hint" id="tree-info">Click a topic</span></div>
+  <div class="tree-wrap" id="treeWrap"><svg id="treeSvg" class="tree-svg"><g id="treeG"></g></svg></div>`;
+  return{crumb:`<a href="#">${esc(CONFIG.short)}</a> / Knowledge tree`,wide:true,toc:[],html,after:treeInit};
+}
+function treeInit(){
+  const svg=$("#treeSvg"),g=$("#treeG"),wrap=$("#treeWrap");if(!svg)return;
+  const data=treeData();
+  if(!treeOpen){treeOpen={root:true};treeOpen["p"+curPhase()]=true;DATA.chapters.forEach((c,ci)=>{if(c.phase===curPhase())treeOpen["c"+ci]=true})}
+  const save=()=>store.set(K+".treeOpen",treeOpen);
+  const DX=290,DY=26,W=270;
+  function layout(){
+    const nodes=[],links=[];let row=0;
+    (function walk(n,d,parent){const open=n.kids&&treeOpen[n.id];const me={n,d,x:d*DX,y:0,open,parent};nodes.push(me);
+      if(open&&n.kids.length){const ch=n.kids.map(k=>walk(k,d+1,me));me.y=(ch[0].y+ch[ch.length-1].y)/2;ch.forEach(c=>links.push([me,c]))}else{me.y=row*DY;row++}
+      return me})(data,0,null);
+    return{nodes,links,h:row*DY};
+  }
+  function draw(){
+    const {nodes,links,h}=layout();const pos={};nodes.forEach(x=>{if(x.n.tid)pos[x.n.tid]=x});
+    let s="";
+    links.forEach(([a,b])=>{const x1=a.x+W,y1=a.y,x2=b.x,y2=b.y,mx=(x1+x2)/2;s+=`<path class="tl" d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}"/>`});
+    if(treeSel&&pos[treeSel]){const me=pos[treeSel];
+      T[treeSel].pre.forEach(p=>{const a=pos[p];if(a)s+=`<path class="td pre" d="M${a.x+W},${a.y} C${a.x+W+120},${a.y} ${me.x-120},${me.y} ${me.x},${me.y}"/>`});
+      (unlocks[treeSel]||[]).forEach(u=>{const b=pos[u];if(b)s+=`<path class="td unl" d="M${me.x+W},${me.y} C${me.x+W+120},${me.y} ${b.x-120},${b.y} ${b.x},${b.y}"/>`});}
+    nodes.forEach(x=>{const n=x.n,isT=!!n.tid,hasK=n.kids&&n.kids.length;const cls=["tn",isT?"topic":"grp",isT&&done[n.tid]?"done":"",n.tid===treeSel?"sel":"",treeSel&&isT&&(T[treeSel].pre.includes(n.tid))?"pre":"",treeSel&&isT&&(unlocks[treeSel]||[]).includes(n.tid)?"unl":""].join(" ");
+      const lab=n.label.length>40?n.label.slice(0,38)+"…":n.label;
+      s+=`<g class="${cls}" data-id="${n.id}" transform="translate(${x.x},${x.y})"><rect x="0" y="-10" width="${W}" height="20" rx="5"/>${hasK?`<text class="tg" x="8" y="4">${x.open?"−":"+"}</text>`:""}<text x="${hasK?22:10}" y="4">${esc(lab)}</text>${isT&&done[n.tid]?`<text class="tk" x="${W-14}" y="4">✓</text>`:""}</g>`});
+    g.innerHTML=s;
+    g.querySelectorAll(".tn").forEach(el=>el.onclick=ev=>{ev.stopPropagation();const id=el.dataset.id;
+      if(id.startsWith("t-")){const tid=id.slice(2);if(treeSel===tid){location.hash="t-"+tid;return}treeSel=tid;const t=T[tid];$("#tree-info").innerHTML=`<b>${t.num} ${esc(t.title)}</b> · needs ${t.pre.length} · unlocks ${(unlocks[tid]||[]).length} · <a href="#t-${tid}">open topic →</a> (or click it again)`;draw()}
+      else{treeOpen[id]=!treeOpen[id];save();draw()}});
+    return h;
+  }
+  // zoom & pan
+  let v=treeView||{k:1,x:20,y:40};const apply=()=>{g.setAttribute("transform",`translate(${v.x},${v.y}) scale(${v.k})`);treeView=v};
+  const zoomAt=(f,cx,cy)=>{const k=Math.min(3,Math.max(.2,v.k*f));v.x=cx-(cx-v.x)*k/v.k;v.y=cy-(cy-v.y)*k/v.k;v.k=k;apply()};
+  const fit=()=>{const b=g.getBBox();const W0=wrap.clientWidth,H0=wrap.clientHeight;const k=Math.min(1.2,Math.max(.2,Math.min(W0/(b.width+40),H0/(b.height+40))));v={k,x:20-b.x*k,y:20-b.y*k};apply()};
+  wrap.addEventListener("wheel",e=>{e.preventDefault();const r=wrap.getBoundingClientRect();zoomAt(e.deltaY<0?1.12:1/1.12,e.clientX-r.left,e.clientY-r.top)},{passive:false});
+  const pts=new Map();let last=null,pinch=null;
+  wrap.addEventListener("pointerdown",e=>{pts.set(e.pointerId,[e.clientX,e.clientY]);if(pts.size===1)last=[e.clientX,e.clientY];if(pts.size===2){const [a,b]=[...pts.values()];pinch=Math.hypot(a[0]-b[0],a[1]-b[1])}});
+  wrap.addEventListener("pointermove",e=>{if(!pts.has(e.pointerId))return;pts.set(e.pointerId,[e.clientX,e.clientY]);
+    if(pts.size===2&&pinch){const [a,b]=[...pts.values()];const d=Math.hypot(a[0]-b[0],a[1]-b[1]);const r=wrap.getBoundingClientRect();zoomAt(d/pinch,(a[0]+b[0])/2-r.left,(a[1]+b[1])/2-r.top);pinch=d}
+    else if(pts.size===1&&last){v.x+=e.clientX-last[0];v.y+=e.clientY-last[1];last=[e.clientX,e.clientY];apply()}});
+  const up=e=>{pts.delete(e.pointerId);if(pts.size<2)pinch=null;if(!pts.size)last=null};wrap.addEventListener("pointerup",up);wrap.addEventListener("pointercancel",up);wrap.addEventListener("pointerleave",up);
+  $("#tz-in").onclick=()=>zoomAt(1.25,wrap.clientWidth/2,wrap.clientHeight/2);$("#tz-out").onclick=()=>zoomAt(.8,wrap.clientWidth/2,wrap.clientHeight/2);$("#tz-fit").onclick=fit;
+  const setAll=o=>{treeOpen={root:true};if(o){data.kids.forEach(p=>{treeOpen[p.id]=true;p.kids.forEach(c=>treeOpen[c.id]=true)})}save();draw();fit()};
+  $("#tz-all").onclick=()=>setAll(true);$("#tz-none").onclick=()=>setAll(false);
+  $("#tz-cur").onclick=()=>{treeOpen={root:true};treeOpen["p"+curPhase()]=true;DATA.chapters.forEach((c,ci)=>{if(c.phase===curPhase())treeOpen["c"+ci]=true});save();draw();fit()};
+  draw();if(treeView)apply();else fit();
 }
 </script>
 </body></html>
