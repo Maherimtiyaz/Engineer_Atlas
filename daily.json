@@ -1,6 +1,84 @@
 {
  "days": [
   {
+   "date": "2026-11-24",
+   "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+     "url": "https://huggingface.co/papers/2611.29897",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "effattn",
+     "note": "Long-horizon, real-time controllable motion generation is essential for interactive animation and humanoid robotics, where an agent must respond to changing instructions and spatial goals while moving. Existing autoregressive diffusion methods generate motion …"
+    },
+    {
+     "kind": "paper",
+     "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+     "url": "https://huggingface.co/papers/2611.31201",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "A systematic framework shows that frontier multimodal models can serve as robot policies when harnessed with interfaces favoring native visual reasoning and tool use, achieving high success in simulated and real manipulation tasks."
+    },
+    {
+     "kind": "paper",
+     "title": "WeMM-Ecom: Advancing Multimodal Content Understanding for WeChat E-Commerce",
+     "url": "https://huggingface.co/papers/2611.30662",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "multimodal",
+     "note": "WeMM-Ecom, a family of multimodal large language models spanning dense and mixture-of-experts sizes, is trained with continued pre-training and hybrid-thinking post-training to achieve strong e-commerce and general-purpose results and is deployed in WeChat."
+    },
+    {
+     "kind": "paper",
+     "title": "3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets",
+     "url": "https://huggingface.co/papers/2611.30013",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "A new benchmark evaluates rigging and motion generation across six 3D morphology categories, compares specialized, video-based, and agent-driven paradigms, and proposes an agentic framework that writes compact parametric skeleton and motion programs executed d…"
+    },
+    {
+     "kind": "paper",
+     "title": "WorldLeague: Benchmarking Physical Agency",
+     "url": "https://huggingface.co/papers/2611.30989",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "evals",
+     "note": "WorldLeague benchmarks 13 AI systems on 60 simulated robot tasks spanning exploration, rearrangement, and adaptation, measuring progress and success to compare autonomous physical goal achievement."
+    },
+    {
+     "kind": "paper",
+     "title": "ViDecide: Teaching Video Diffusion Models to Reason and Plan Step by Step",
+     "url": "https://huggingface.co/papers/2611.26389",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "diffusion",
+     "note": "ViDecide trains video diffusion models to make causal state-transition and stopping decisions, using Corrective Fine-tuning to improve multi-step planning success without policy gradients."
+    },
+    {
+     "kind": "paper",
+     "title": "Let the Fixer Decide: Training a Code Localizer from the Fixer's Likelihood",
+     "url": "https://huggingface.co/papers/2611.12164",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "A code localizer is trained with scores from a frozen fixer via weighted supervised fine-tuning, improving bug localization and patch success for a small coding agent without tests or reinforcement learning."
+    },
+    {
+     "kind": "paper",
+     "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
+     "url": "https://huggingface.co/papers/2611.29338",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "multimodal",
+     "note": "nanoAstra combines semantic action modeling with capability-preserving supervised fine-tuning to train vision-language models for generalizable robot manipulation, achieving strong zero-shot success and faster streaming execution."
+    }
+   ]
+  },
+  {
    "date": "2026-11-23",
    "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
    "items": [
