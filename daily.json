@@ -1,6 +1,84 @@
 {
  "days": [
   {
+   "date": "2026-11-26",
+   "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
+   "items": [
+    {
+     "kind": "paper",
+     "title": "VibeVideoAgent: Closing the Perceptual Loop for Code-Driven Video Generation",
+     "url": "https://huggingface.co/papers/2611.34237",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "Code-driven video generation asks a coding agent to write and run rendering programs. This gives exact control over typography, data visualizations, synchronized audio, and multi-shot scenes, and it leaves an editable project behind. A program that exits clean…"
+    },
+    {
+     "kind": "paper",
+     "title": "Mixture-of-Loops Transformer",
+     "url": "https://huggingface.co/papers/2611.34923",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "tf",
+     "note": "A Mixture-of-Loops Transformer reuses key-value memory across loops and depths, and its U-shaped variant improves pretraining efficiency and inference latency."
+    },
+    {
+     "kind": "paper",
+     "title": "Sage-Med: Scaling Medical Multimodal Intelligence",
+     "url": "https://huggingface.co/papers/2611.34575",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "multimodal",
+     "note": "Establishing effective scaling laws for medical multimodal large language models (MLLMs) remains a persistent and fundamental challenge. Our systematic evaluation shows that existing medical MLLMs tend to underperform frontier general-purpose MLLMs across a ra…"
+    },
+    {
+     "kind": "paper",
+     "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
+     "url": "https://huggingface.co/papers/2611.33144",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "agents",
+     "note": "A framework enables coding agents to develop dexterous manipulation policies without demonstrations by exploring and distilling successful attempts into a program, then refining it for strong simulated and real-world results."
+    },
+    {
+     "kind": "paper",
+     "title": "Improving and Expanding Video Editing Capabilities Without Videos",
+     "url": "https://huggingface.co/papers/2611.34941",
+     "source": "Hugging Face Papers",
+     "level": "Intermediate",
+     "topic": "pretrain",
+     "note": "Image-to-Video Transfer improves pretrained video editors by training them as image editors on single images, enabling new video editing tasks and state-of-the-art results on OpenVE-Bench and OpenVE++."
+    },
+    {
+     "kind": "paper",
+     "title": "DyLoMo-DiT: Dynamic Looped Mixture-of-Experts Diffusion Transformers",
+     "url": "https://huggingface.co/papers/2611.30844",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "moe",
+     "note": "A dynamic looped mixture-of-experts diffusion transformer reuses shared parameters and varies compute across noise levels, improving image generation quality under matched budgets."
+    },
+    {
+     "kind": "paper",
+     "title": "DocSEAM: Bidirectional Cross-Page Encoding for Multi-Page Document Understanding",
+     "url": "https://huggingface.co/papers/2611.34420",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "effattn",
+     "note": "DocSEAM is a lightweight module between a pretrained vision encoder and language model that enriches page visual tokens with neighboring-page context via center-anchored masked self-attention, improving multi-page document VQA and reducing boundary sensitivity…"
+    },
+    {
+     "kind": "paper",
+     "title": "HOG-WAM: Improving Visual Robustness through Future Gradient Prediction",
+     "url": "https://huggingface.co/papers/2611.34811",
+     "source": "Hugging Face Papers",
+     "level": "Advanced",
+     "topic": "serve",
+     "note": "HOG-WAM improves visually robust control in world-action models by adding future Histograms of Oriented Gradients as auxiliary structural supervision through a training-only HOG diffusion transformer, yielding higher success under observation corruptions while…"
+    }
+   ]
+  },
+  {
    "date": "2026-11-25",
    "summary": "Most-upvoted papers on Hugging Face Daily Papers.",
    "items": [
