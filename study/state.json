@@ -5,7 +5,7 @@
     "site": "https://maherimtiyaz.github.io/Islamic_Studies_Atlas/",
     "daily_minutes": 90,
     "topic": "fa_aqidah",
-    "day": 3,
+    "day": 4,
     "completed": [],
     "alongside": {
       "quran": "b_tajweed",
@@ -17,7 +17,7 @@
     "daily_minutes": 180,
     "track": "ceiling",
     "topic": "howcomp",
-    "day": 5,
+    "day": 6,
     "completed": []
   },
   "log": [
@@ -38,6 +38,11 @@
       "date": "2026-11-27",
       "islamic": "fa_aqidah day 2 (angels and books)",
       "ai": "howcomp day 4 (GPUs, three regimes)"
+    },
+    {
+      "date": "2026-11-28",
+      "islamic": "fa_aqidah day 3 (messengers)",
+      "ai": "howcomp day 5 (review, memory-hierarchy project)"
     }
   ]
 }
